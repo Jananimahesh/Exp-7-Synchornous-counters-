@@ -128,7 +128,8 @@ TMING DIAGRAM OF UP COUNTER
 TIMING DIAGRAM FOR DOWN COUNTER
 
 
-![image](https://user-images.githubusercontent.com/119432417/215234231-a0fb45ed-3e94-4e01-b84e-156de426daaa.png)
+![image](https://user-images.githubusercontent.com/119432417/215234479-47cdb45a-ec32-4f50-b207-ed1b9c5c8231.png)
+
 
 
 
