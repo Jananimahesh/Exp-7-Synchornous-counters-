@@ -60,6 +60,32 @@ Open a new project using Quartus II.
 
 UPCOUNTER
 
+module uc(input clk, input reset,output[0:3]counter);
+reg[0:3]counter_up;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_up <=4'd0;
+else
+counter_up <=counter_up+4'd1;
+end
+assign counter = counter_up;
+endmodule
+
+DOWN COUNTER
+
+module dc(input clk,input reset, output[0:3]counter);
+reg[0:3]counter_down;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_down <= 4'd0;
+else
+counter_down<=counter_down-4'd1;
+end
+assign counter = counter_down;
+endmodule
+
 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
@@ -74,6 +100,15 @@ RegisterNumber:  22006734
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 
+RTL REALIZATION FOR UP COUNTER
+
+![image](https://user-images.githubusercontent.com/119432417/215233969-15efd55d-0cce-4b90-ae00-bc5385225112.png)
+
+RTL REALIZATION OF DOWN COUNTER
+
+
+![image](https://user-images.githubusercontent.com/119432417/215234003-803b8a52-95cb-4ca1-adb0-8cd98cb62f88.png)
+
 
 
 
@@ -85,10 +120,30 @@ RegisterNumber:  22006734
 ### TIMING DIGRAMS FOR COUNTER  
 
 
+TMING DIAGRAM OF UP COUNTER
+
+
+![image](https://user-images.githubusercontent.com/119432417/215234170-05619bf5-bd3a-47da-a5ca-197c00a8c6a4.png)
+
+TIMING DIAGRAM FOR DOWN COUNTER
+
+
+![image](https://user-images.githubusercontent.com/119432417/215234231-a0fb45ed-3e94-4e01-b84e-156de426daaa.png)
+
+
 
 
 
 ### TRUTH TABLE 
+
+TRUTH TABLE FOR UP COUNTER
+
+![image](https://user-images.githubusercontent.com/119432417/215234274-8dc8424e-41e8-41a5-aa48-32d3b2c38e01.png)
+
+TRUTH TABLE FOR DOWN COUNTER
+
+![image](https://user-images.githubusercontent.com/119432417/215234347-4864aee8-eed1-4a8e-bfa9-b0e0d6b44249.png)
+
 
 
 
@@ -96,3 +151,4 @@ RegisterNumber:  22006734
 
 
 ### RESULTS 
+Hence the Four bit Up counter and Down counter is implemented successfully and its functionality is validated.
